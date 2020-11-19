@@ -1,0 +1,36 @@
+1. Laravel-mix (https://laravel-mix.com/docs/5.0/installation)
+
+npm install laravel-mix --save-dev
+cp node_modules/laravel-mix/setup/webpack.mix.js ./
+-second command create a copy of webpack.mix.js in the root of your project, where you will
+setup this file according to your needs.
+-in my case I changed this line:
+//mix.js('src/app.js', 'dist/').sass('src/app.scss', 'dist/');
+with:
+mix.js('resources/js/app.js', 'public/js/app.js').sass('resources/scss/app.scss', 'public/css/app.css');
+
+
+-add the scripts:
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+
+-install cross-env to handle different environments
+    npm install cross-env --save-dev
+
+-run npm run watch, this command first time used it will install different packages like: 
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.12"
+
+-then npm run watch will compile the files you already put together on webpack.mix.js; you need to keep
+the terminal open to compile everytime you write code
+
+
+2. Tailwind CSS (https://tailwindcss.com/)
+
+    Tailwind CSS is a highly customizable, low-level CSS framework that gives you all 
+    of the building blocks you need to build bespoke designs without any annoying opinionated 
+    styles you have to fight to override.
+
