@@ -34,3 +34,6 @@ the terminal open to compile everytime you write code
     of the building blocks you need to build bespoke designs without any annoying opinionated 
     styles you have to fight to override.
 
+
+3. Import data to MongoDB Atlas
+mongoimport --host pizzarealtime-shard-00-01.680wl.mongodb.net:27017 --db PizzaRealTime --collection menus --type json --file C:/Users/dan/Desktop/menus.json --jsonArray --authenticationDatabase admin --ssl --username truscadani --password 652020td
