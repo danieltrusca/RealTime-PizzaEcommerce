@@ -31,6 +31,7 @@
         >
       </div>
 
+      <% if(user) { %>
       <div>
         <form action="/orders" method="POST" class="mt-12" id="payment-form">
           <div class="relative w-1/2 ml-auto mb-4">
@@ -79,11 +80,13 @@
           </div>
         </form>
       </div>
-      <!-- <a
+      <% } else { %>
+      <a
         href="/login"
         class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6"
         >Login to continue</a
-      > -->
+      >
+      <% } %>
     </div>
   </div>
   <% } else { %>
