@@ -37,3 +37,9 @@ the terminal open to compile everytime you write code
 
 3. Import data to MongoDB Atlas
 mongoimport --host pizzarealtime-shard-00-01.680wl.mongodb.net:27017 --db PizzaRealTime --collection menus --type json --file C:/Users/dan/Desktop/menus.json --jsonArray --authenticationDatabase admin --ssl --username truscadani --password 652020td
+
+
+4. Socket.IO 
+https://socket.io/get-started/chat/
+
+npm install socket.io
